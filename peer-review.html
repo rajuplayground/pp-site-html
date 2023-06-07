@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixous Publications</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+</head>
+
+<body class="h-full">
+    <header class="absolute inset-x-0 top-0 z-50">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="index.html" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Pixous Publications</span>
+                    <img class="h-11 w-auto" src="/assets/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button id="hamburger-menu" type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12 font-serif">
+                <a href="author-info.html"
+                    class="block  border-b-2 border-transparent hover:border-violet-500 text-sm font-semibold leading-6 text-gray-900">Authors'
+                    Infomation</a>
+                <a href="peer-review.html"
+                    class="block  border-b-2 border-violet-500 text-sm font-semibold leading-6 text-gray-900">Peer
+                    Review
+                    Policy</a>
+                <a href="editorial-board.html"
+                    class="block  border-b-2 border-transparent hover:border-violet-500 text-sm font-semibold leading-6 text-gray-900">Editorial
+                    Board</a>
+                <a href="archives.html"
+                    class="block  border-b-2 border-transparent hover:border-violet-500 text-sm font-semibold leading-6 text-gray-900">Archives</a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="#"
+                    class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit
+                    Paper</a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div id="main-mobile-nav" class="hidden last:lg:hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-50"></div>
+            <div
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="index.html" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Pixous Publication</span>
+                        <img class="h-8 w-auto" src="/assets/images/logo.png" alt="">
+                    </a>
+                    <button id="mobile-nav-close" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="author-info.html"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Authors'
+                                Information</a>
+                            <a href="peer-review.html"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Peer
+                                Review Policy</a>
+                            <a href="editorial-board.html"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Editorial
+                                Board</a>
+                            <a href="archives.html"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Archives</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="submit-paper.html"
+                                class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit
+                                Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14">
+        <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
+            aria-hidden="true"></div>
+        <div class="py-10">
+            <section>
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+                    <h1 class="font-serif text-3xl sm:text-4xl font-bold text-violet-950 text-center">
+                        Peer Review Policy
+                    </h1>
+                </div>
+            </section>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
+    </div>
+    <main>
+        <section>
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="pb-10">
+                    <div>
+                        <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">Peer Review Process</h2>
+                        <p class="mt-6 text-lg leading-8">All manuscripts submitted to JAES will follow a rigorous
+                            double-blind peer review process, where reviewers and authors remain anonymous throughout
+                            the
+                            process and the peer review comments will not be published.</p>
+                        <ul role="list" class="mt-8 space-y-8 text-gray-600">
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>New manuscripts will first be reviewed and assured for non- plagiarism by the
+                                    managing
+                                    editor. Manuscripts that do not conform to the journal’s ethical policies and
+                                    standards
+                                    will be rejected directly. Manuscripts that passed the checking will proceed to the
+                                    next
+                                    stage.</span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>The manuscript will be assigned to associate editors based on the expertise in the
+                                    relevant field. </span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>The associate editors will assign experts in the relevant field to review the
+                                    manuscript. Reviewers should not work at the same institution as any of the authors,
+                                    close collaborators or joint grant holders. </span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>The reviewers are also required to evaluate the supplementary material if
+                                    submitted.</span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>The Editor-in-Chief / Deputy editor in chief or the academic editor designated by
+                                    the
+                                    Editor-in-Chief will make a final decision based on the comments(at least 2 per
+                                    manuscript) of the reviewers:</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mt-16 mb-6 text-2xl font-bold tracking-tight text-gray-900">Accepted, Accepted with
+                            minor
+                            correction, Revisions Required, Resubmit for Review or Rejected</h2>
+                        <div
+                            class="divide-y divide-gray-200 overflow-hidden rounded-lg shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
+                            <div
+                                class="rounded-tl-lg rounded-tr-lg sm:rounded-tr-none group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                                <div>
+                                    <span class="inline-flex rounded-lg p-3 bg-teal-50 text-teal-700 ring-4 ring-white">
+                                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mt-8">
+                                    <h3 class="text-base font-semibold leading-6 text-gray-900">
+                                        <a href="#" class="focus:outline-none">
+                                            <!-- Extend touch target to entire panel -->
+                                            <span class="absolute inset-0" aria-hidden="true"></span>
+                                            Accepted
+                                        </a>
+                                    </h3>
+                                    <p class="mt-2 text-sm text-gray-500">The manuscripts will be further processed for
+                                        publication after intimating the same with authors by sending an acceptance
+                                        letter. </p>
+                                </div>
+                            </div>
+                            <div
+                                class="sm:rounded-tr-lg group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                                <div>
+                                    <span
+                                        class="inline-flex rounded-lg p-3 bg-purple-50 text-purple-700 ring-4 ring-white">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mt-8">
+                                    <h3 class="text-base font-semibold leading-6 text-gray-900">
+                                        <a href="#" class="focus:outline-none">
+                                            <!-- Extend touch target to entire panel -->
+                                            <span class="absolute inset-0" aria-hidden="true"></span>
+                                            Accepted with minor correction
+                                        </a>
+                                    </h3>
+                                    <p class="mt-2 text-sm text-gray-500">Manuscripts need to be resubmitted after
+                                        properly addressing the comments by the reviewer. The revised manuscript should
+                                        be re-submitted within 7 days.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                                <div>
+                                    <span class="inline-flex rounded-lg p-3 bg-sky-50 text-sky-700 ring-4 ring-white">
+                                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <polyline points="1 4 1 10 7 10"></polyline>
+                                            <polyline points="23 20 23 14 17 14"></polyline>
+                                            <path
+                                                d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mt-8">
+                                    <h3 class="text-base font-semibold leading-6 text-gray-900">
+                                        <a href="#" class="focus:outline-none">
+                                            <!-- Extend touch target to entire panel -->
+                                            <span class="absolute inset-0" aria-hidden="true"></span>
+                                            Revisions Required
+                                        </a>
+                                    </h3>
+                                    <p class="mt-2 text-sm text-gray-500">The author should revise and resubmit the
+                                        manuscript within 14-21 days.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                                <div>
+                                    <span
+                                        class="inline-flex rounded-lg p-3 bg-yellow-50 text-yellow-700 ring-4 ring-white">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mt-8">
+                                    <h3 class="text-base font-semibold leading-6 text-gray-900">
+                                        <a href="#" class="focus:outline-none">
+                                            <!-- Extend touch target to entire panel -->
+                                            <span class="absolute inset-0" aria-hidden="true"></span>
+                                            Resubmit for Review
+                                        </a>
+                                    </h3>
+                                    <p class="mt-2 text-sm text-gray-500">The author will have more time to revise and
+                                        resubmit for the second round of review until the manuscript is accepted.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="sm:rounded-bl-lg group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                                <div>
+                                    <span class="inline-flex rounded-lg p-3 bg-rose-50 text-rose-700 ring-4 ring-white">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 9.75h4.875a2.625 2.625 0 010 5.25H12M8.25 9.75L10.5 7.5M8.25 9.75L10.5 12m9-7.243V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mt-8">
+                                    <h3 class="text-base font-semibold leading-6 text-gray-900">
+                                        <a href="#" class="focus:outline-none">
+                                            <!-- Extend touch target to entire panel -->
+                                            <span class="absolute inset-0" aria-hidden="true"></span>
+                                            Rejected
+                                        </a>
+                                    </h3>
+                                    <p class="mt-2 text-sm text-gray-500">The editor will directly inform the final
+                                        decision to the authors and archive submission.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="my-6">Any appeal regarding the review process and editorial decision can be intimated
+                            Pixous
+                            publication by letter to <a href="mailto:editor@pixouspublication.com"
+                                class="text-violet-800 hover:underline">editor@pixouspublication.com</a> and attach the
+                            detailed reasons for
+                            the appeal and the point-by-point reply to the reviewers’ comments. The decision of appeal
+                            will be given by the Editor-in-Chief or editorial board of the journal according to the
+                            relevant information of the article. Decisions on appeals are final without exception.</p>
+                        <p>The peer review process will be deemed to be completed for all accepted manuscripts. The
+                            manuscripts need to be copyedited, layout edited and proofread Before being published.</p>
+                    </div>
+                    <div>
+                        <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">Publication Guidelines for
+                            Reviewer</h2>
+                        <p class="mt-6 text-lg leading-8">Peer reviews are conducted as a double-blind process through
+                            the Pixous publication online submission system. As an editor’s and/or reviewer’s comments
+                            will determine the acceptance or rejection of manuscripts, these comments play an important
+                            role in the peer-review process.</p>
+                        <ul role="list" class="mt-8 space-y-8 text-gray-600">
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Reviews should be conducted in a fair and objective manner. Remarks and
+                                    suggestions should not contain insults or criticism directed at the author as
+                                    opposed to the manuscript.</span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>The author has the right to all the information published in his manuscript.
+                                    Reviewers are not allowed to divulge or use that information for personal
+                                    gain.</span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Uphold utmost confidentiality through the peer-review process. </span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>If the reviewer feels that a manuscript’s subject does not fit within the scope of
+                                    the journal, they may intimate the editorial office to take further action.</span>
+                            </li>
+                            <li class="flex flex-col">
+                                <div class="flex gap-x-3">
+                                    <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                        fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Possible areas of focus while conducting the review of manuscripts:</span>
+                                </div>
+                                <ul role="list" class="mt-8 ml-8 space-y-3">
+                                    <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32"
+                                            class="h-8 w-8 flex-none fill-blue-500">
+                                            <path
+                                                d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z">
+                                            </path>
+                                        </svg><span class="ml-4">Potential ethical concerns</span></li>
+                                    <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32"
+                                            class="h-8 w-8 flex-none fill-blue-500">
+                                            <path
+                                                d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z">
+                                            </path>
+                                        </svg><span class="ml-4">Technical errors</span></li>
+                                    <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32"
+                                            class="h-8 w-8 flex-none fill-blue-500">
+                                            <path
+                                                d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z">
+                                            </path>
+                                        </svg><span class="ml-4">Logical errors (fallacies, lapses in logic,
+                                            etc.)</span></li>
+                                    <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32"
+                                            class="h-8 w-8 flex-none fill-blue-500">
+                                            <path
+                                                d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z">
+                                            </path>
+                                        </svg><span class="ml-4">Language errors that mar the clarity of the text</span>
+                                    </li>
+                                    <li class="flex flex-col">
+                                        <div class="flex">
+                                            <svg aria-hidden="true" viewBox="0 0 32 32"
+                                                class="h-8 w-8 flex-none fill-blue-500">
+                                                <path
+                                                    d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z">
+                                                </path>
+                                            </svg><span class="ml-4">References :</span>
+                                        </div>
+                                        <ul role="list" class="mt-8 ml-10 space-y-3">
+                                            <li class="flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    class="h-8 w-8 flex-none stroke-blue-500 fill-none"
+                                                    stroke-width="2">
+                                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                                </svg><span class="ml-4">Potential ethical concerns</span></li>
+                                            <li class="flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    class="h-8 w-8 flex-none stroke-blue-500 fill-none"
+                                                    stroke-width="2">
+                                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                                </svg><span class="ml-4">Technical errors</span></li>
+                                            <li class="flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    class="h-8 w-8 flex-none stroke-blue-500 fill-none"
+                                                    stroke-width="2">
+                                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                                </svg><span class="ml-4">Logical errors (fallacies, lapses in logic,
+                                                    etc.)</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">Publication Ethics for
+                            Publishers</h2>
+                        <ul role="list" class="mt-8 space-y-8 text-gray-600">
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>To create and update plagiarism policies to stop unethical work submission.</span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>To not discriminate been authors and evaluate work purely on the basis of its
+                                    subject.</span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>To handle conflicts of interest wisely and with discretion. </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="bg-neutral-100">
+            <div
+                class="py-7 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center sm:justify-between">
+                <div
+                    class="text-center py-5 border-b-gray-300 border-b-[1px] sm:border-b-0 w-full sm:w-auto flex justify-center">
+                    <img class="w-[150px] sm:w-[170px]" src="/assets/images/logo.png" alt="">
+                </div>
+                <div class="py-5 text-gray-500">
+                    <p>Pixous publication</p>
+                    <p>TC 31/298</p>
+                    <p>Building No: 170, Trivandrum,</p>
+                    <p>Kerala 695024</p>
+                    <p>Email: editor@pixouspublication.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-neutral-200">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <p class="py-8 text-sm text-center">Pixous Publications © 2023. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/assets/js/script.js"></script>
+</body>
+
+</html>

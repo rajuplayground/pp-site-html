@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixous Publications</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+</head>
+
+<body class="h-full">
+    <header class="absolute inset-x-0 top-0 z-50">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="index.html" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Pixous Publications</span>
+                    <img class="h-11 w-auto" src="/assets/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button id="hamburger-menu" type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12 font-serif">
+                <a href="author-info.html"
+                    class="block  border-b-2 border-transparent hover:border-violet-500 text-sm font-semibold leading-6 text-gray-900">Authors'
+                    Infomation</a>
+                <a href="peer-review.html"
+                    class="block  border-b-2 border-transparent hover:border-violet-500 text-sm font-semibold leading-6 text-gray-900">Peer
+                    Review
+                    Policy</a>
+                <a href="editorial-board.html"
+                    class="block  border-b-2 border-transparent hover:border-violet-500 text-sm font-semibold leading-6 text-gray-900">Editorial
+                    Board</a>
+                <a href="archives.html"
+                    class="block  border-b-2 border-transparent hover:border-violet-500 text-sm font-semibold leading-6 text-gray-900">Archives</a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="submit-paper.html"
+                    class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit
+                    Paper</a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div id="main-mobile-nav" class="hidden last:lg:hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-50"></div>
+            <div
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="index.html" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Pixous Publication</span>
+                        <img class="h-8 w-auto" src="/assets/images/logo.png" alt="">
+                    </a>
+                    <button id="mobile-nav-close" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="author-info.html"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Authors'
+                                Information</a>
+                            <a href="peer-review.html"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Peer
+                                Review Policy</a>
+                            <a href="editorial-board.html"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Editorial
+                                Board</a>
+                            <a href="archives.html"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Archives</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="submit-paper.html"
+                                class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit
+                                Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14">
+        <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
+            aria-hidden="true"></div>
+        <div class="mx-auto max-w-7xl px-6 py-20 sm:py-32 lg:px-8">
+            <div
+                class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+                <h1
+                    class="max-w-2xl text-4xl font-serif font-bold tracking-tight text-gray-900 lg:col-span-2 xl:col-auto">
+                    Journal
+                    of Applied
+                    Engineering
+                    and
+                    Science
+                    (JAES)</h1>
+                <div class="flex flex-col gap-4 mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+                    <p class="text-lg leading-8 text-gray-600">Journal of Applied Engineering and Science'(JAES) is an
+                        international
+                        peer
+                        reviewed journal
+                        publishing under Pixous Publications. The journal aims to present innovative insights in the
+                        field
+                        of engineering and science.</p>
+                    <p class="text-lg leading-8 text-gray-600">The scope of Journal of Applied Engineering and
+                        Science
+                        includes publishing original
+                        research
+                        articles, review articles, case studies, and other scholarly works related to a particular
+                        field
+                        or
+                        disciplines. The scope of the Journal of Applied Engineering and Science includes, but is
+                        not
+                        limited to:</p>
+                    <ul
+                        class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  text-base font-bold text-violet-900">
+                        <li class="grid content-center bg-violet-200 text-black p-2 rounded-lg text-center">Signal
+                            and
+                            Image
+                            Analysis</li>
+
+                        <li class="grid content-center bg-violet-200 text-black p-2 rounded-lg text-center">Computer
+                            Graphics and
+                            Vision</li>
+                        <li class="grid content-center bg-violet-200 text-black p-2 rounded-lg text-center">Customer
+                            Relationship Management</li>
+                        <li class="grid content-center bg-violet-200 text-black p-2 rounded-lg text-center">
+                            Artificial
+                            Intelligence
+                        </li>
+                        <li class="grid content-center bg-violet-200 text-black p-2 rounded-lg text-center">Computer
+                            Security and
+                            Safety</li>
+                        <li class="grid content-center bg-violet-200 text-black p-2 rounded-lg text-center">Medical,
+                            Multimedia
+                        </li>
+                        <li class="grid content-center bg-violet-200 text-black p-2 rounded-lg text-center">
+                            Industrial
+                            and
+                            other
+                            Applications</li>
+                        <li class="grid content-center bg-violet-200 text-black p-2 rounded-lg text-center">
+                            Knowing Machines</li>
+                        <li class="grid content-center bg-violet-200 text-black p-2 rounded-lg text-center">
+                            Emerging advances in IT and new application</li>
+                    </ul>
+                </div>
+                <img src="assets/images/journal-cover.jpeg" alt=""
+                    class="mt-10 mx-auto w-full max-w-sm rounded-2xl object-cover sm:mt-16 lg:mt-0 xl:row-span-2 xl:row-end-2 xl:mt-36">
+            </div>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
+    </div>
+    <main>
+        <section class="hero-content">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="py-10 space-y-10">
+                    <div class="space-y-1">
+                        <h1 class="text-3xl sm:text-4xl font-bold text-violet-950">
+                            Current Issue
+                        </h1>
+                        <div class="flex text-sm">
+                            <p class="px-4"><b>Vol. 1 (2023)</b></p>
+                            <p class="font-bold text-violet-400">|</p>
+                            <p class="pl-4"><b>Published:</b> 16.04.2023 </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div
+                            class="flex bg-white rounded-xl border border-violet-100 hover:shadow-lg transition-shadow">
+                            <a target="_blank" href="volume1/post-covid.pdf"
+                                class="flex flex-col w-full justify-between divide-y divide-gray-200">
+                                <div class="flex flex-col gap-4 p-5">
+                                    <p class="text-violet-800 font-semibold">Impact of Advance Technologies Over
+                                        Reviving Companies: Post Covid
+                                    </p>
+                                    <p class="text-sm">Dr. Aswathy S U, Ansu Liz Thomas</p>
+                                </div>
+                                <div class="flex justify-end px-5 py-2">
+                                    <div class="flex items-center gap-1 font-bold text-sm uppercase text-violet-800">
+                                        <img class="w-8" src="/assets/images/pdf-paper.png" alt="">
+                                        <span>PDF</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div
+                            class="flex flex-row bg-white rounded-xl border border-violet-100 hover:shadow-lg transition-shadow">
+                            <a target="_blank" href="volume1/5g-wireless.pdf"
+                                class="flex flex-col w-full justify-between divide-y divide-gray-200">
+                                <div class="flex flex-col gap-4 p-5">
+                                    <p class="text-violet-800 font-semibold">Study of Recent 5G Wireless Technology
+                                        Developments
+                                    </p>
+                                    <p class="text-sm">Rahul Thomas</p>
+                                </div>
+                                <div class="flex justify-end px-5 py-2">
+                                    <div class="flex items-center gap-1 font-bold text-sm uppercase text-violet-800">
+                                        <img class="w-8" src="/assets/images/pdf-paper.png" alt="">
+                                        <span>PDF</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div
+                            class="flex bg-white rounded-xl border border-violet-100 hover:shadow-lg transition-shadow">
+                            <a target="_blank" href="volume1/brain-tumor.pdf"
+                                class="flex flex-col w-full justify-between divide-y divide-gray-200">
+                                <div class="flex flex-col gap-4 p-5">
+                                    <p class="text-violet-800 font-semibold">A Review of Brain Tumor Segmentation of MRI
+                                        Image Using Machine Learning Algorithm
+                                    </p>
+                                    <p class="text-sm">Rroan M</p>
+                                </div>
+                                <div class="flex justify-end px-5 py-2">
+                                    <div class="flex items-center gap-1 font-bold text-sm uppercase text-violet-800">
+                                        <img class="w-8" src="/assets/images/pdf-paper.png" alt="">
+                                        <span>PDF</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div
+                            class="flex bg-white rounded-xl border border-violet-100 hover:shadow-lg transition-shadow">
+                            <a target="_blank" href="volume1/review-real.pdf"
+                                class="flex flex-col w-full justify-between divide-y divide-gray-200">
+                                <div class="flex flex-col gap-4 p-5">
+                                    <p class="text-violet-800 font-semibold">Review-Real Time Smart Energy Meter and
+                                        Load Automation Using IoT
+                                    </p>
+                                    <p class="text-sm">Ansu Liz Thomas</p>
+                                </div>
+                                <div class="flex justify-end px-5 py-2">
+                                    <div class="flex items-center gap-1 font-bold text-sm uppercase text-violet-800">
+                                        <img class="w-8" src="/assets/images/pdf-paper.png" alt="">
+                                        <span>PDF</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div
+                            class="flex bg-white rounded-xl border border-violet-100 hover:shadow-lg transition-shadow">
+                            <a target="_blank" href="volume1/multi-point-cloud.pdf"
+                                class="flex flex-col w-full justify-between divide-y divide-gray-200">
+                                <div class="flex flex-col gap-4 p-5">
+                                    <p class="text-violet-800 font-semibold">Multi-Point Data Security Mechanism to
+                                        Facilitate Secure Cloud Data Storage Solutions
+                                    </p>
+                                    <p class="text-sm">Dr. Aswathy S U</p>
+                                </div>
+                                <div class="flex justify-end px-5 py-2">
+                                    <div class="flex items-center gap-1 font-bold text-sm uppercase text-violet-800">
+                                        <img class="w-8" src="/assets/images/pdf-paper.png" alt="">
+                                        <span>PDF</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div
+                            class="flex bg-white rounded-xl border border-violet-100 hover:shadow-lg transition-shadow">
+                            <a target="_blank" href="volume1/deep-learning.pdf"
+                                class="flex flex-col w-full justify-between divide-y divide-gray-200">
+                                <div class="flex flex-col gap-4 p-5">
+                                    <p class="text-violet-800 font-semibold">Implementation of Optimized Deep
+                                        Learning-Based Early Flood Detection Management System and Avoidance System
+                                    </p>
+                                    <p class="text-sm">Bibithamol Baby</p>
+                                </div>
+                                <div class="flex justify-end px-5 py-2">
+                                    <div class="flex items-center gap-1 font-bold text-sm uppercase text-violet-800">
+                                        <img class="w-8" src="/assets/images/pdf-paper.png" alt="">
+                                        <span>PDF</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <a href="volume-1.html" class="text-sm font-semibold leading-6 text-violet-800">More <span
+                                aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+                <div class="flex flex-col gap-10">
+                    <div class="flex flex-col gap-4 flex-1 leading-8">
+                        <h3 class="text-3xl font-bold text-violet-800">Aim and Scope</h3>
+                        <p>The aim of the Journal of Applied Engineering and Science (JAES) is to provide a platform for
+                            Academics, Researchers, and Professionals to share their work and ideas with a wider
+                            audience. The scope of the Journal of Applied Engineering and Science (JAES) includes
+                            publishing original research articles, review articles, case studies, and other scholarly
+                            works related to a particular field or discipline. The scope of the Journal of Applied
+                            Engineering and Science (JAES) also includes:</p>
+                        <ul role="list" class="mt-4 space-y-8 text-gray-600">
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span><b>Peer Review:</b> Rigorous peer-review process to ensure the quality and
+                                    accuracy of
+                                    the research they publish. Open Access: Operate on an open-access model, meaning
+                                    that their content is freely available to anyone with an internet connection.</span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span><b>Interdisciplinary Approach:</b> Aim to foster interdisciplinary collaboration
+                                    by publishing research from multiple disciplines.</span>
+                            </li>
+                            <li class="flex gap-x-3">
+                                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span><b>Global Outreach:</b> Global outreach aim to disseminate research to a wider
+                                    audience beyond a particular region or country.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4 flex-1 leading-8">
+                        <h3 class="text-3xl font-bold text-violet-800">Open Access Statement</h3>
+                        <p>Journal of Applied Engineering and Science (JAES) follows Gold Open Access: This policy makes
+                            articles immediately and permanently available online without any subscription or paywall
+                            barriers. The journal typically covers the costs of publication through article processing
+                            charges (APCs), which are paid by the author, their institution, or a funding agency. At the
+                            same time, authors who publish in Journal of Applied Engineering and Science (JAES) retain
+                            the copyright of their article.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="bg-neutral-100">
+            <div
+                class="py-7 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center sm:justify-between">
+                <div
+                    class="text-center py-5 border-b-gray-300 border-b-[1px] sm:border-b-0 w-full sm:w-auto flex justify-center">
+                    <img class="w-[150px] sm:w-[170px]" src="/assets/images/logo.png" alt="">
+                </div>
+                <div class="py-5 text-gray-500">
+                    <p>Pixous publication</p>
+                    <p>TC 31/298</p>
+                    <p>Building No: 170, Trivandrum,</p>
+                    <p>Kerala 695024</p>
+                    <p>Email: editor@pixouspublication.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-neutral-200">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <p class="py-8 text-sm text-center">Pixous Publications © 2023. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/assets/js/script.js"></script>
+</body>
+
+</html>

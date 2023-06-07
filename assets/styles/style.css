@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: fallback;
+    src: url(/assets/fonts/roboto-slab.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: fallback;
+    src: url(/assets/fonts/inter.woff2) format('woff2');
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  @layer base {
+    :root {
+        font-family: 'Inter', sans-serif;
+    }
+  }
+
+.hero-content {
+    background : radial-gradient( 47.72% 108.66% at -12.1% 21.18%,rgba(129,219,219,0.25) 24.27%,rgba(160,232,232,0) 100% ),radial-gradient( 76.64% 192.13% at 107.15% 116.7%,rgba(255,178,167,0.25) 0%,rgba(201,191,255,0.25) 74.61% ),#ffffff
+}
+
+.hero-content::before {
+    background: linear-gradient(0deg, rgb(255, 255, 255) 18.69%, rgba(255, 255, 255, 0) 100%);
+}
+
+.hero-content::after {
+    background: linear-gradient(0deg, rgb(255, 255, 255) 18.69%, rgba(255, 255, 255, 0) 100%);
+}
